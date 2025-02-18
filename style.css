@@ -17,7 +17,8 @@ header {
         background-color: black;
         color: orange;
         text-align: center;
-        padding: 1%;
+        padding: 0;
+        margin: 0;
         }
     & .flex{
         display: flex;
@@ -29,6 +30,7 @@ header {
             height: 75px;
             padding: 0;
             margin: 0;
+            cursor: pointer;
             }
         & nav {
             flex-grow: 1;
@@ -38,13 +40,14 @@ header {
                 height: 100%;
                 gap: 5%;
                 padding-right: 5%;
+                margin: 0;
                 & li {
                     list-style: none;
                     text-decoration: none;
                     & a {
                         color: black;
                         text-decoration: none;
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         font-weight: bold;
                         cursor: pointer;
                     }
@@ -69,3 +72,51 @@ section#home {
         font-weight: bold;
         }
     }
+
+section#beer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: orange;
+        & h2 {
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: bold;
+        }
+}   
+
+section#brasserie {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: black;
+        & h2 {
+        color: orange;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: bold;
+        }
+}
+
+section#contact {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: orange;
+        & h2 {
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: bold;
+        }
+}
