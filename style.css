@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,15 +15,22 @@ img {
 }
 
 header {
+    position: fixed;
     display: flex;
     flex-direction: column;
+    width: 100%;
     & #banniere {
-        background-color: black;
-        color: orange;
-        text-align: center;
-        padding: 0;
+        background-color: rebeccapurple;
+        padding: 5px;
         margin: 0;
+        text-align: center;
+        & a {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 0.8rem;
         }
+    }
     & .flex{
         display: flex;
         align-items: center;
@@ -57,66 +68,122 @@ header {
     }
 }
 
-section#home {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    background-color: black;
-        & h1 {
-        color: orange;
+
+
+main {
+    scroll-behavior: smooth;
+    & section#hero {
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        text-transform: uppercase;
-        font-size: 3rem;
-        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: orange;
+        background-image: url('./media/mousse.jpg');
+        background-position: center bottom;
+        background-size: cover;
+        background-attachment: fixed;
+        & #hero-content {
+            width: 75%;
+            & h1 {
+                color: black;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 3rem;
+                font-weight: bolder;  
+                & span.beerstyle {
+                    background-color: black;
+                    color: white;
+                    padding: 2px 0px 2px 10px; 
+                    border-radius: 10px;
+                    & span.hubstyle {
+                        color: black;
+                        background-color: orange;
+                        padding: 2px 10px 2px 10px;
+                        margin-left: 5px; 
+                        border-radius: 10px;
+                    }
+                }
+            }
+            & p {
+                color: black;
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+            & a {
+                text-decoration: none;
+                background-color: orange;
+                color: black;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }   
+    }
+    & section#beer {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: orange;
+        background-image: url('./media/beer.jpg');
+        background-position: center top;
+        background-size: cover;
+        background-attachment: scroll;
+        & #beer-content {
+            width: 50%;
+            & h2 {
+                color: black;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+    }   
+
+    & section#brasserie {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: black;
+            & #brasserie-content {
+            width: 50%;
+            & h2 {
+            color: orange;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: bold;
+            }
         }
     }
 
-section#beer {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    background-color: orange;
-        & h2 {
-        color: black;
+    & section#contact {
+        display: flex;
         text-align: center;
-        text-transform: uppercase;
-        font-size: 2rem;
-        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: orange;
+            & #contact-content {
+            width: 50%;
+            & h2 {
+            color: black;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: bold;
+            }
         }
-}   
-
-section#brasserie {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    background-color: black;
-        & h2 {
-        color: orange;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 2rem;
-        font-weight: bold;
-        }
-}
-
-section#contact {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    background-color: orange;
-        & h2 {
-        color: black;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 2rem;
-        font-weight: bold;
-        }
+    }
 }
